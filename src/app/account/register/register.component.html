@@ -1,0 +1,237 @@
+<div class="main">
+    <h1>Imaginnovate</h1>
+    <h2>Register your account</h2>
+    <div class="container">
+        <div class="content">
+            <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <h5>First Name</h5>
+                        <input type="text" formControlName="firstName" placeholder="John" pInputText>
+                        <div
+                            *ngIf="registerform.controls['firstName'].touched && !registerform.controls['firstName'].valid ">
+
+                            <span *ngIf="registerform.controls['firstName'].hasError('required') ">
+                                First name is required
+                            </span>
+                            <span *ngIf="registerform.controls['firstName'].hasError('minlength') ">
+                                Min length is 1
+                            </span>
+                            <span *ngIf="registerform.controls['firstName'].hasError('maxlength') ">
+                                max length is 15
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <h5>Last Name</h5>
+                        <input type="text" placeholder="marshall" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Phone Number</h5>
+                        <input type="number" placeholder="9876543210" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Email</h5>
+                        <input type="text" formControlName="email" placeholder="John.marshall@gmail.com" pInputText>
+                        <span *ngIf="registerform.controls['email'].touched && !registerform.controls['email'].valid ">
+
+                            <span *ngIf="registerform.controls['email'].hasError('required') ">
+                                Email is required
+                            </span>
+                            <span *ngIf="registerform.controls['email'].hasError('email') ">
+                                Email is invalid
+                            </span>
+
+                        </span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Password</h5>
+
+                        <input type="password" formControlName="password" placeholder="**********" pInputText>
+                        <div
+                            *ngIf="registerform.controls['password'].touched && !registerform.controls['password'].valid ">
+
+                            <span *ngIf="registerform.controls['password'].hasError('required') ">
+                                Password is required
+                            </span>
+                            <span *ngIf="registerform.controls['password'].hasError('minlength') ">
+                                Password must be at least 8 characters
+                            </span>
+                            <span *ngIf="registerform.controls['password'].hasError('maxlength') ">
+                                Password must be max length is 15
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <h5>Confirm Password</h5>
+                        <input type="password" formControlName="confirmPassword" placeholder="**********" pInputText>
+                        <div
+                            *ngIf="registerform.controls['confirmPassword'].touched && !registerform.controls['password'].valid ">
+
+                            <span *ngIf="registerform.controls['confirmPassword'].hasError('required') ">
+                                Confirm Password is required </span>
+                            <span
+                                *ngIf="registerform.controls['confirmPassword'].touched && !registerform.controls['password'].value!=registerform.controls['confirmPassword'].value">
+                                Password is required mismatch
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="rbutton">
+
+                    <div class="field-radiobutton">
+                        <p-radioButton class="checkbox" value="btn" formControlName="control" required="required">
+                        </p-radioButton>
+                        <label for="btn">I agree to Terms & Privacy Policy</label>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <p-toast position="top-left"></p-toast>
+
+                    <p-button type="Submit" label="Create Account" styleClass="button"></p-button>
+
+
+
+                </div>
+                <div class="para">
+                    <a routerLink="/account/login">
+                        <p>Dont have an account? Join free today</p>
+                    </a>
+
+
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="main">
+    <h1>Imaginnovate</h1>
+    <h2>Register your account</h2>
+    <div class="container">
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <h5>First Name</h5>
+                        <input type="text" formControlName="firstName" placeholder="John" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Last Name</h5>
+                        <input type="text" placeholder="marshall" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Phone Number</h5>
+                        <input type="text" placeholder="9876543210" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Email</h5>
+                        <input type="text" formControlName="email" placeholder="John.marshall@gmail.com" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+
+
+                    <div class="input-box">
+                        <h5>Password</h5>
+                        <input type="password" formControlName="password" placeholder="**********" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="input-box">
+                        <h5>Confirm Password</h5>
+                        <input type="password" formControlName="confirmPassword" placeholder="**********" pInputText>
+                        <span class="ml-2"></span>
+                    </div>
+                    <div class="rbutton">
+
+                        <div class="field-radiobutton">
+                            <p-radioButton  class="checkbox" value="btn" formControlName="control"></p-radioButton>
+                            <label for="btn">I agree to Terms & Privacy Policy</label>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="button">
+                    <p-button (click)="registeration()" (click)="addSingle()" [disabled]="!registerationform.valid" label="Create Account" value="submit"
+                        styleClass="button"></p-button>
+
+                    <p-toast position="top-left"></p-toast>
+
+                </div>
+                <div class="para">
+                    <p>Dont have an account? Join free today</p>
+
+
+                     <p-button label="Submit"></p-button> -->
+
+
+    <!-- </div>
+            </form>
+        </div>
+    </div>
+</div> -->

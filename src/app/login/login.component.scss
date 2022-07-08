@@ -1,0 +1,123 @@
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.7)), url(/assets/backg.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 112.5rem 81.25rem;
+
+}
+
+.main h1 {
+
+    position: absolute;
+    width: 15.25rem;
+    height: 2.9375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 11.25rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    padding-bottom: 1.5625rem;
+}
+
+.main h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    width: 19.8125rem;
+    height: 2.5rem;
+    top: 14.375rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.875rem;
+    color: #FFFFFF;
+}
+
+.container {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    height: 31.25rem;
+    width: 53.125rem;
+    padding: 15.625rem 3.125rem;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.content form .user-details {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1.25rem 0 2.25rem 0;
+}
+
+form .user-details .input-box {
+
+    margin-bottom: .3125rem;
+    width: calc(100% / 2 - 2.5rem);
+
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: .3125rem;
+    padding-left: 1.5625rem;
+    
+}
+
+.user-details .input-box input {
+
+    height: 3.125rem;
+    width: 21.875rem;
+    font-size: 1rem;
+    border-radius: .3125rem;
+    padding-left: .9375rem;
+    background: transparent;
+    border-color: #ffffff;
+    color:#FFFFFF;
+
+
+}
+.user-details .input-box span {
+    color: red;
+}
+::-webkit-input-placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1rem;
+    color: gray;
+
+}
+
+.rbutton {
+    padding-top: 1.25rem;
+    text-align: center;
+    padding-bottom: 1.5625rem;
+}
+button.button{
+    background-color: #0AA6FE;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin: .125rem 12.5rem;
+    border-radius: .3125rem;
+    height: 3.125rem;
+    width: 21.6875rem;
+}
+
+
+form .para p {
+    padding-top: 1.0625rem;
+    text-align: center;
+    font-size: 1rem;
+
+}

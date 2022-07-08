@@ -1,0 +1,72 @@
+<div class="main">
+    <h1>Imaginnovate</h1>
+    <h2>Login to your account</h2>
+    <div class="container">
+        <div class="content">
+            <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <h5>Email Address</h5>
+                        <input type="text" formControlName="emailAddress" placeholder="John.marshall@gmail.com" pInputText>
+                        <div
+                        *ngIf="loginform.controls['emailAddress'].touched && !loginform.controls['emailAddress'].valid ">
+
+                        <span *ngIf="loginform.controls['emailAddress'].hasError('required') ">
+                            Email is required
+                        </span>
+                        <span *ngIf="loginform.controls['emailAddress'].hasError('email') ">
+                            Email is invalid 
+                        </span>
+                    </div>
+                    </div>
+                    
+                    <div class="input-box">
+                        <h5>Password</h5>
+                        <input type="password" formControlName="password" placeholder="**********" pInputText>
+                        <div
+                        *ngIf="loginform.controls['password'].touched && !loginform.controls['password'].valid ">
+
+                        <span *ngIf="loginform.controls['password'].hasError('required') ">
+                            Password is required
+                        </span>
+                        <span *ngIf="loginform.controls['password'].hasError('minlength') ">
+                            Password must be at least 8 characters
+                        </span>
+                        <span *ngIf="loginform.controls['password'].hasError('maxlength') ">
+                            Password must be max length is 15
+                        </span>
+                    </div>                    </div>
+                    <div class="rbutton">
+
+                        <div class="field-radiobutton">
+                            <p-radioButton  class="checkbox" value="btn"  formControlName="control" inputId="city"></p-radioButton>
+                            <label for="btn">Remember me</label>
+                        </div>
+                        <div>
+                        <p>Forgot password?</p>
+                        </div>
+                    </div>
+                </div>
+
+
+               
+                <div class="button">
+                    <p-button type="Submit"  label="Login now"  styleClass="button"></p-button>
+                    
+                    <p-toast position="top-left"></p-toast>
+
+                </div>
+                <div class="para">
+                    <a routerLink="/account/register">
+
+                    <p>Dont have an account? Join free today</p>
+                    </a>
+
+                
+
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
